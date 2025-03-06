@@ -11,13 +11,22 @@ import { ProfileComponent } from './profile/profile.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = "App";
-  handleClickEvent() {
-    console.log("function called");
-    this.otherFunction();
-  };
+  title = "App"; // property
+  name: string = "Rohit"
+  age: number = 20
+  userLogin: boolean = false
+  info: string | number | boolean = "this is some data"
+  info2: any = "any data you want"
   otherFunction() {
-    console.log("other function");
-    alert("ended now");
+    // this.name=100 // getting error
+    // let x = 10; // variable
+    this.info = "diff data"
+    this.info = 100
+    this.info = true
+  }
+
+  // 
+  sum(a: number, b: number) {
+    console.log(a + b);
   }
 }
