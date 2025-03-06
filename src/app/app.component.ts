@@ -9,4 +9,29 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'myApp';
+  count: number = 0;
+
+  handleIncrement() {
+    this.count++;
+  }
+
+  handleReset() {
+    this.count = 0;
+  }
+
+  handleDecrement() {
+    this.count--;
+  }
+
+  handleCount(val:string) {
+    if (val == "minus") {
+      this.count--;
+    } else if (val == "plus") {
+      this.count++;
+    } else if (val == "reset") {
+      this.count = 0;
+    } else {
+      alert("Invalid input");
+    }
+  }
 }
