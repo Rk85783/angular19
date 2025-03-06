@@ -12,4 +12,12 @@ import { ProfileComponent } from './profile/profile.component';
 })
 export class AppComponent {
   title = "App";
+  handleClickEvent() {
+    console.log("function called");
+    this.otherFunction();
+  };
+  otherFunction() {
+    console.log("other function");
+    alert("ended now");
+  }
 }
