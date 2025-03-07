@@ -9,4 +9,13 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'myApp';
+  color = 1;
+
+  handleClick(val: number) {
+    this.color = val;
+  };
+
+  handleInput(event: Event) {
+    this.color = parseInt((event.target as HTMLInputElement).value);
+  }
 }
