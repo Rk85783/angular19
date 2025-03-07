@@ -9,4 +9,14 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'myApp';
+
+  color = "";
+
+  handleColor(val: string) { 
+    this.color = val;
+  }
+
+  changeColor(event: Event) {
+    this.color = (event.target as HTMLInputElement).value;
+  }
 }
